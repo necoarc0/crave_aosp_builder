@@ -502,7 +502,7 @@ jobs:
         # Set up build environment
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
-        repo forall proprietary_vendor_lenovo_TB125FU -c 'git reset --hard; git clean -fdx' #temp solution for a weird git bug
+        repo forall proprietary_vendor_lenovo_TB125FU -c 'git reset --hard; git clean -fdx'; \ #temp solution for a weird git bug
         source build/envsetup.sh && \
 
         echo "Repository: ${{ github.repository }}"; \
